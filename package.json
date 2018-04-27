@@ -1,0 +1,31 @@
+{
+  "name": "is-classnames",
+  "author": "Christian Vogt <christian.m.vogt@gmail.com>",
+  "version": "0.0.1",
+  "description": "A simple utility for conditionally joining classNames together with the addition of modifier className prefixing.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christianvogt/is-classnames.git"
+  },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "coverage": "jest --coverage",
+    "test": "jest",
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^22.4.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-babel-minify": "^4.0.0"
+  }
+}
