@@ -16,6 +16,7 @@ The API and functionality are based on the the [classnames](https://github.com/J
 This library supports the creation of classNames that is very similar to BEM and borrows notation from SUIT CSS. The difference lies in how modifier rules are expressed. Modifiers are prefixed with `is-` followed by the short adjective.
 
 BEM: `library-button--disabled`
+
 Ours: `library-button.is-disabled`
 
 ### Auto Prefixing
