@@ -1,4 +1,4 @@
-import cx, { create } from '../index';
+import cx, { create, prefix } from '../index';
 
 describe('is-classnames', () => {
 
@@ -24,6 +24,10 @@ describe('is-classnames', () => {
     expect(cx({ '': true })).toBe('');
   });
 
+  it('always apply prefix', () => {
+    expect(prefix('a-a', 'a')).toBe('is-a-a is-a');
+  });
+
   it('custom prefix must contain a hyphen', () => {
     expect(() => create('a')).toThrow();
   });
@@ -31,5 +35,8 @@ describe('is-classnames', () => {
   it('create custom prefix', () => {
     const ccx = create('test-');
     expect(ccx('a')).toBe('test-a');
+    expect(ccx('a-a', 'a')).toBe('a-a test-a');
+    expect(ccx.prefix('a-a', 'a')).toBe('test-a-a test-a');
   });
+
 });

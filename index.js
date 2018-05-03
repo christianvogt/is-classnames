@@ -1,11 +1,11 @@
-function create(prefix) {
+function factory(prefix, force) {
 
   if (prefix != null && prefix.length > 0 && prefix.indexOf('-') === -1) {
     throw new Error('is-classnames prefix must contain a hyphen.');
   }
 
   const addPrefix = prefix == null || prefix.length === 0 ? (cls) => (cls) :
-    (cls) => ((cls.length === 0 || cls.indexOf('-') >= 0) ? cls : `${prefix}${cls}`);
+    (cls) => (!force && (cls.length === 0 || cls.indexOf('-') >= 0) ? cls : `${prefix}${cls}`);
 
   function process(...args) {
     const classes = [];
@@ -37,15 +37,23 @@ function create(prefix) {
     });
 
     return classes.join(' ');
-
   }
 
   return process;
 }
 
-export { create };
+// export factory function to create instance with custom prefix
+export const create = (prefix) => {
+  const fn = factory(prefix);
+  fn.prefix = factory(prefix, true);
+  return fn;
+};
 
-export const classNames = create();
+// export non-prefixing function
+export const classNames = factory();
+
+// export prefixing function
+export const prefix = factory('is-', true);
 
 // export default classnames function with prefix === 'is-'
-export default create('is-');
+export default factory('is-');
