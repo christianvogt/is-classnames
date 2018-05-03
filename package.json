@@ -9,6 +9,16 @@
     "url": "https://github.com/christianvogt/is-classnames.git"
   },
   "license": "MIT",
+  "keywords": [
+    "BEM",
+    "css",
+    "classes",
+    "classname",
+    "classnames",
+    "react",
+    "util",
+    "utility"
+  ],
   "files": [
     "dist",
     "index.js"
