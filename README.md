@@ -1,5 +1,8 @@
 # is-Classnames
 
+[![npm version](https://img.shields.io/npm/v/is-classnames.svg?style=flat-square)](https://www.npmjs.com/package/is-classnames)
+[![Build Status](https://travis-ci.org/christianvogt/is-classnames.svg?branch=master)](https://travis-ci.org/christianvogt/is-classnames#)
+
 A simple utility for conditionally joining classNames together with the addition of modifier className prefixing.
 
 Install with [npm](https://www.npmjs.com/):
