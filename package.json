@@ -1,7 +1,7 @@
 {
   "name": "is-classnames",
   "author": "Christian Vogt <christian.m.vogt@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple utility for conditionally joining classNames together with the addition of modifier className prefixing.",
   "main": "dist/index.js",
   "repository": {
